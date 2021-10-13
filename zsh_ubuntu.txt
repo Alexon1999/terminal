@@ -1,0 +1,137 @@
+terminal : c'est un environment dans notre ordi et on intéragit avec ordi en utilsant des textes commandes
+
+installation
+install node
+sudo apt update
+sudo apt install nodejs npm
+
+#install a webserver
+sudo apt-get install apache2
+sudo service apache2 start
+sudo service apache2 stop
+sudo service apache2 status # ex:see if apache/mysql is running 
+
+<--| https://www.hostinger.com/tutorials/linux-commands |-->
+
+# read a file / lire un fichier
+cat <<file chemin>>
+ex: cat ./.zshrc , cat .zshrc
+ex: cat file.txt
+
+# edit a file
+code <<file chemin>>
+vim <<file chemin>>
+ex : code /.git
+
+
+# create a file
+touch file.txt
+touch index.html
+
+pwd : see the path
+
+cd / : go to root
+cd ~ : user directory
+cd : user directory
+
+# > :write
+# >> :append
+echo kldjfo > text.txt
+echo lkopkpp >> text.txt
+
+source : execute executable
+
+ex : source env/Scripts/activate  
+
+in the user directory
+.bashrc  : config for bash terminal
+.zshrc   : config for zsh terminal
+
+source ~/.zshrc
+
+ls : listez les fichiers de votre répertoire
+ls -a : lister meme les fichier cachés
+
+#manuel / documentation for a command
+man ls
+man grep
+
+#Present working directory
+pwd
+/mnt/c/Users/alexo/Desktop : root mnt c ...
+
+# where the python executable is there
+which python
+which node
+# all programs are installed
+/usr/bin/
+
+# /etc/ est réservé aux fichiers de configuration locaux sur votre ordinateur
+
+# / : root , /etc : root etc et shells
+cat /etc/shells
+
+# extraire un fichier
+ex : tar xzf OpenJDK11U-jdk_x64_linux_hotspot_11.0.9.1_1.tar.gz
+ex : tar -xvf Python-3.6.5.tgz
+
+#mettre une path variable d'environnement 
+export PATH=$PWD/jdk-11.0.9.1+1/bin:$PATH
+
+#find command
+find /home/alexon/Desktop/python/demo -name app.py
+
+
+# | : pipe : le pipe se place entre 2 commandes ,take the first result to the next 
+# <<first>> | <<second>>
+
+
+# grep and pipe
+grep : search a specific thing ( grep PATTERN ) , if its found give the line
+# grep React ./zsh_ubuntu.txt
+# grep React ./zsh_ubuntu.txt | wc -l
+
+ls -a | grep React
+ls -a | grep React ( <<result will be put here automatically>> )
+
+cat zsh_ubuntu.txt | grep ch  :it will give me all line that have ch in it
+cat lonfile.txt | more  : samething as  more lonfile.txt
+
+apt list --installed | grep python
+# apt list --installed : give me all the packages installed
+apt list --installed | grep python  :result give by first , and search for the line that have python
+
+# wc : compter Nombre de lignes, de mots, 
+# options -l : just la ligne (il va donner que le nombre de ligne)
+# -w : nb de mots
+ex: wc -l zsh_ubuntu.txt
+ls -a | wc -l
+
+# combiner plusieurs pipe
+ls -a | grep React | wc -l
+
+# put thing in a file
+ls > file.txt  : put the result to file.txt
+echo "Hello World" > file.txt
+cat file1.txt file2.txt > file3.txt
+
+#change default shell
+cat /etc/shells
+chsh
+
+# admin superuser (root user)
+sudo -s
+
+# change the ownership of a file/folder to the specified username
+# chown linuxuser2 file.ext   :file
+sudo chown alexon ./          :current folder
+sudo chown root ./
+
+#change the owner for a folder, by default it is root , if its root it will change Recursively
+sudo chown alexon:alexon -R ./
+
+
+https://hosting.review/tutorial/how-to-update-node/
+
+// terminals
+https://terminalsplash.com/
