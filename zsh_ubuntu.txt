@@ -23,7 +23,6 @@ code <<file chemin>>
 vim <<file chemin>>
 ex : code /.git
 
-
 # create a file
 touch file.txt
 touch index.html
@@ -38,6 +37,8 @@ cd : user directory
 # >> :append
 echo kldjfo > text.txt
 echo lkopkpp >> text.txt
+
+echo "Hello World" :marche avec ou sans guillemets
 
 source : execute executable
 
